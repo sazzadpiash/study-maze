@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Team Member
 ```bash
 Sazzad Hossain
+Md Golam Mehedi
 ```
 
 ## Getting Started
