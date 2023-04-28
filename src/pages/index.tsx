@@ -1,6 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
+import Support from '@/components/Support/Support'
+import Counselling from '@/components/Counselling/Counselling'
+
+
 // import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,7 +19,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='min-h-screen'>
-        {/* <h1 className='text-6xl font-bold'>This is awesome</h1> */}
+   <Support/>
+   <Counselling/>
+      
       </div>
     </>
   )
