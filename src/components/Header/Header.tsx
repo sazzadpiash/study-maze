@@ -1,7 +1,6 @@
 const Header = () => {
     return (
         <div>
-            This is Header asdas
         </div>
     );
 };
