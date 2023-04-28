@@ -1,13 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Support from '@/components/Support/Support'
-import Counselling from '@/components/Counselling/Counselling'
-
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import Support from "@/components/Support/Support";
+import Counselling from "@/components/Counselling/Counselling";
 
 // import styles from '@/styles/Home.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import Banner from "@/components/banner/banner";
+import styles from "@/styles/Home.module.css";
+import ServiceBlog from "@/components/services/ServiceBlog";
+import ApplySection from "@/components/applySection/applySection";
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -18,11 +21,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='min-h-screen'>
-   <Support/>
-   <Counselling/>
-      
+
+      <div>
+        <Support />
+        <Counselling />
+        <ServiceBlog></ServiceBlog>
+        <ApplySection></ApplySection>
       </div>
     </>
-  )
+  );
 }

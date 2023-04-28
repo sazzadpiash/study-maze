@@ -18,8 +18,8 @@ const Header = () => {
                 </div>
             </div>
             <div className="flex gap-5">
-                <button className="flex flex-col items-center text-slate-700 hover:text-primary transition"><FiHeart className="text-2xl"/><span className="text-sm">Wishlist</span></button>
-                <button className="flex flex-col items-center text-slate-700 hover:text-primary transition"><FiUser className="text-2xl"/><span className="text-sm">Sign in</span></button>
+                <button className="flex flex-col items-center text-slate-700 hover:text-primary transition"><FiHeart className="text-2xl" /><span className="text-sm">Wishlist</span></button>
+                <button className="flex flex-col items-center text-slate-700 hover:text-primary transition"><FiUser className="text-2xl" /><span className="text-sm">Sign in</span></button>
             </div>
         </div>
     );

@@ -13,7 +13,7 @@ const Footer = () => {
                             <Image src={logo} alt="" className="w-8" />
                             <h2 className="text-xl font-medium"><span className="text-primary">Study</span><span className="text-secondary">maze</span></h2>
                         </div>
-                        <p>101 Frederick St,<br/>Kitchener, ON<br/>N2H 6R3</p>
+                        <p>101 Frederick St,<br />Kitchener, ON<br />N2H 6R3</p>
                     </div>
                     <div>
                         <p className="text-lg font-medium mb-5 text-secondary">Follow us</p>
