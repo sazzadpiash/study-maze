@@ -4,7 +4,7 @@ import Header from "@/components/Header/Header";
 const Layout = ({ children }: any) => {
     return (
         <div>
-            {/* <Header></Header> */}
+            <Header></Header>
             {children}
             <Footer></Footer>
         </div>

@@ -10,6 +10,8 @@ import Banner from "@/components/banner/banner";
 import styles from "@/styles/Home.module.css";
 import ServiceBlog from "@/components/services/ServiceBlog";
 import ApplySection from "@/components/applySection/applySection";
+import Country from "@/components/collegeSection/country";
+import College from "@/components/collegeSection/college";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -28,6 +30,8 @@ export default function Home() {
         <Counselling />
         <ServiceBlog></ServiceBlog>
         <ApplySection></ApplySection>
+        <Country></Country>
+        <College></College>
       </div>
     </>
   );
