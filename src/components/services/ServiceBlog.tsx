@@ -60,7 +60,7 @@ const ServiceBlog = () => {
 
                     <div className="p-5 font-semibold flex flex-col h-72">
                         <div className="space-y-5">
-                            <h3 className="text-xl">Why Study Hospitality in Australia</h3>
+                            <h3 className="text-xl">Why Study Hospitality <br /> in Australia</h3>
                             <p className="text-gray-600">APRIL 26, 2023</p>
                         </div>
                         <div className={`flex items-center font-bold pt-24 ${styles.linkBtn}`}>
