@@ -1,11 +1,38 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Open_Sans } from 'next/font/google'
+import { Inter } from 'next/font/google'
+import HelpVideoSection from '@/components/help-video-section/HelpVideoSection'
+import HelpImageSection from '@/components/help-image-section/HelpImageSection'
+import LookingCourseSection from '@/components/looking-course-section/LookingCourseSection'
+// import styles from '@/styles/Home.module.css'
+
 import Banner from '@/components/banner/banner'
 import styles from '@/styles/Home.module.css'
 import ServiceBlog from '@/components/services/ServiceBlog'
 import ApplySection from '@/components/applySection/applySection'
-const inter = Open_Sans({ subsets: ['latin'] })
+import MoreHelpSection from '@/components/more-help-section/MoreHelpSection'
+const inter = Inter({ subsets: ['latin'] })
+// import Head from "next/head";
+// import Image from "next/image";
+// import { Inter } from "next/font/google";
+import Support from "@/components/Support/Support";
+import Counselling from "@/components/Counselling/Counselling";
+import WhyChoose from '@/components/WhyChoose/WhyChoose'
+
+// // import styles from '@/styles/Home.module.css'
+
+// import Banner from "@/components/banner/banner";
+// import styles from "@/styles/Home.module.css";
+// import ServiceBlog from "@/components/services/ServiceBlog";
+// import ApplySection from "@/components/applySection/applySection";
+// const inter = Inter({ subsets: ["latin"] });
+
+// import Support from "@/components/Support/Support";
+// import Counselling from "@/components/Counselling/Counselling";
+
+// import styles from '@/styles/Home.module.css'
+
+
 
 export default function Home() {
   return (
@@ -16,10 +43,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <div>
+        <HelpVideoSection></HelpVideoSection>
+        <HelpImageSection></HelpImageSection>
+        <LookingCourseSection></LookingCourseSection>
+        <MoreHelpSection></MoreHelpSection>
+        <Support />
+        <Counselling />
+        <WhyChoose/>
         <ServiceBlog></ServiceBlog>
         <ApplySection></ApplySection>
       </div>
     </>
-  )
+  );
 }
