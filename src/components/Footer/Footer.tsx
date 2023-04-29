@@ -70,7 +70,7 @@ const Footer = () => {
                         <p className="text-lg font-medium mb-5 text-secondary">Legal</p>
                         <ul className="flex flex-col gap-2">
                             <li><Link href="/">Privacy & Cookies Policy</Link></li>
-                            <li><Link href="/">ApplyBoard Fees</Link></li>
+                            <li><Link href="/">Studymaze Fees</Link></li>
                             <li><Link href="/">Terms & Conditions</Link></li>
                             <li><Link href="/">Modern Slavery Statement</Link></li>
                         </ul>
