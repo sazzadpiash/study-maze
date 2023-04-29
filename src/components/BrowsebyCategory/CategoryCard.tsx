@@ -16,8 +16,8 @@ const CategoryCard = ({category}) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             className="text-center h-40 flex flex-col items-center gap-3 justify-center p-5 cursor-pointer hover:bg-secondary bg-[#edf3f6] transition hover:text-[#edf3f6]">
-            <img className="w-10" src={isHover ? category.alt : category.icon} alt="category_icon" />
-            <p>{category.name}</p>
+            <img className="w-10" src={isHover ? category?.alt : category?.icon} alt="category_icon" />
+            <p>{category?.name}</p>
         </div>
     );
 };

@@ -7,11 +7,11 @@ const HelpVideoSection = () => {
                 <h1 className="text-2xl md:text-5xl text-center font-bold">How We Help</h1>
             </div>
             <div>
-                {/* <center>
+                <center>
                     <video preload="none" crossOrigin="anonymous" playsInline tabIndex={0} poster="assets/images/help-image-section/poster/help-video-poster.gif" className="w-full md:w-1/2 mx-2 md:mx-0 rounded-md" controls>
                         <source src="/assets/media/videos/help-section-video.mp4" />
                     </video>
-                </center> */}
+                </center>
             </div>
             <div className="my-4 md:my-8 text-center">
                 <button className=" py-2 md:py-3 px-4 md:px-6 text-lg text-white font-medium rounded-sm capitalize bg-[#f95c39]">
