@@ -18,6 +18,7 @@ const inter = Inter({ subsets: ['latin'] })
 import Support from "@/components/Support/Support";
 import Counselling from "@/components/Counselling/Counselling";
 import WhyChoose from '@/components/WhyChoose/WhyChoose'
+import BrowseByCategory from '@/components/BrowsebyCategory/BrowseByCategory'
 
 // // import styles from '@/styles/Home.module.css'
 
@@ -45,6 +46,7 @@ export default function Home() {
       </Head>
 
       <div>
+        <BrowseByCategory></BrowseByCategory>
         <HelpVideoSection></HelpVideoSection>
         <HelpImageSection></HelpImageSection>
         <LookingCourseSection></LookingCourseSection>
