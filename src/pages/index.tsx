@@ -17,6 +17,7 @@ const inter = Inter({ subsets: ['latin'] })
 // import { Inter } from "next/font/google";
 import Support from "@/components/Support/Support";
 import Counselling from "@/components/Counselling/Counselling";
+import ChoiceDestinationSection from '@/components/choice-destination-section/ChoiceDestinationSection'
 
 // // import styles from '@/styles/Home.module.css'
 
@@ -52,6 +53,7 @@ export default function Home() {
         <Counselling />
         <ServiceBlog></ServiceBlog>
         <ApplySection></ApplySection>
+        <ChoiceDestinationSection></ChoiceDestinationSection>
       </div>
     </>
   );
