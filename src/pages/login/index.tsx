@@ -10,7 +10,7 @@ const Login = () => {
     return (
         <div className='min-h-screen login-wrapper relative grid grid-cols-2'>
             <div>
-                <Image src={bg} alt="login-bg" style={{ zIndex: -1 }} layout='fill' className='absolute left-0 top-0 object-cover' />
+                <Image src={bg} alt="login-bg"/>
             </div>
             <div className='w-full h-screen grid items-center justify-center'>
                 <div>
