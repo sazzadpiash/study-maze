@@ -1,0 +1,16 @@
+[
+    {
+        "studyName": "Paralegal",
+        "category":"Law",
+        "description":"The Paralegal degree program at American National University can provide you with the fundamental knowledge",
+        "duration": 2,
+        "degree":"Bachelor",
+        "institute":"American National University",
+        "location":{"country":"United States", "state":"Virginia"},
+            
+        
+        "tuitionFee": 49000,
+        "programme":"LLB",
+        "photo":{"background":"abc.jpg",  "logo": "logo.jpg"}
+    }
+]
