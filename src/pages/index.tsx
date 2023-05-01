@@ -29,6 +29,7 @@ export default function Home() {
       </Head>
 
       <div>
+        <Banner></Banner>
         <BrowseByCategory></BrowseByCategory>
         <HelpVideoSection></HelpVideoSection>
         <HelpImageSection></HelpImageSection>

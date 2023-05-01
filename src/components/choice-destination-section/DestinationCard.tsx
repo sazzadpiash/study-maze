@@ -1,4 +1,4 @@
-
+import { BsArrowRight } from "react-icons/bs";
 const DestinationCard = () => {
     return (
         <div className="w-44 h-56 mx-auto">
@@ -13,7 +13,9 @@ const DestinationCard = () => {
                     </div>
                     <div className=" mt-2 ms-2">
                         <button className="text-[#f95c39] hover:text-[#f5c4ba]">
-                            {"Explore ->"}
+                            <div className="flex justify-center items-center">
+                                <p>Explore</p> <p className="mt-1 mx-1"> <BsArrowRight></BsArrowRight></p>
+                            </div>
                         </button>
                     </div>
                 </div>
