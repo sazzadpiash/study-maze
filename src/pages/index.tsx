@@ -16,10 +16,7 @@ import ChoiceDestinationSection from '@/components/choice-destination-section/Ch
 import WhyChoose from '@/components/WhyChoose/WhyChoose'
 import Country from '@/components/collegeSection/country'
 import College from '@/components/collegeSection/college'
-
-
-
-
+import BrowseByCategory from '@/components/BrowsebyCategory/BrowseByCategory'
 
 export default function Home() {
   return (
@@ -32,6 +29,7 @@ export default function Home() {
       </Head>
 
       <div>
+        <BrowseByCategory></BrowseByCategory>
         <HelpVideoSection></HelpVideoSection>
         <HelpImageSection></HelpImageSection>
         <LookingCourseSection></LookingCourseSection>
