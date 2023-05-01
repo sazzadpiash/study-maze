@@ -2,6 +2,7 @@ import Image from "next/image";
 import logo from "../../../public/Assets/graduation-hat.png";
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FiHeart, FiUser } from 'react-icons/fi';
+import Link from "next/link";
 
 const Header = () => {
     return (
@@ -19,7 +20,7 @@ const Header = () => {
             </div>
             <div className="flex gap-5">
                 <button className="flex flex-col items-center text-slate-700 hover:text-primary transition"><FiHeart className="text-2xl" /><span className="text-sm">Wishlist</span></button>
-                <button className="flex flex-col items-center text-slate-700 hover:text-primary transition"><FiUser className="text-2xl" /><span className="text-sm">Sign in</span></button>
+                <Link href='/login' className="flex flex-col items-center text-slate-700 hover:text-primary transition"><FiUser className="text-2xl" /><span className="text-sm">Sign in</span></Link>
             </div>
         </div>
     );
