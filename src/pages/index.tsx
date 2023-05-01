@@ -47,6 +47,7 @@ export default function Home() {
       </Head>
 
       <div>
+        <Banner></Banner>
         <HelpVideoSection></HelpVideoSection>
         <HelpImageSection></HelpImageSection>
         <LookingCourseSection></LookingCourseSection>
