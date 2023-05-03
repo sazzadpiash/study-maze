@@ -7,12 +7,15 @@ const CategoriesSidebar = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch('http://localhost:5000/course');
+            const response = await fetch('http://localhost:5000/categories');
             const data = await response.json();
             setUniversities(data);
         }
         fetchData();
     }, []);
+
+    console.log(universities);
+
 
     return (
         <section className="mx-2 md:mx-4">
@@ -36,7 +39,8 @@ const CategoriesSidebar = () => {
                             universities?.map((course: any) => {
                                 return <CategoryItem
                                     key={course?._id}
-                                    category={course?.category}
+                                    category={course.name}
+                                    icon={course.icon}
                                 >
                                 </CategoryItem>
                             })}
