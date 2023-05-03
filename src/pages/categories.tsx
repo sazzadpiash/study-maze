@@ -1,7 +1,12 @@
 import CategoriesSidebar from "@/components/categories-components/CategoriesSidebar";
+import { useRouter } from "next/router";
+
 
 
 const Categories = () => {
+    const router = useRouter()
+    const {category} = router.query;
+    console.log(router) 
     return (
         <section className="">
 

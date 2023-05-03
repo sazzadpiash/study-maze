@@ -4,7 +4,6 @@ import { FaLastfmSquare } from 'react-icons/fa';
 
 const CategoryCard = ({category}:any) => {
     const [isHover, setIsHover] = useState(false);
-    console.log(category)
 
     const handleMouseEnter = () =>{
         setIsHover(true)
