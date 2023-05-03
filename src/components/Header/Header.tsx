@@ -3,8 +3,9 @@ import logo from "../../../public/Assets/graduation-hat.png";
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FiHeart, FiUser } from 'react-icons/fi';
 import Link from "next/link";
-
 const Header = () => {
+
+
     return (
         <div className="h-16 px-20 flex items-center justify-between shadow">
             <div className="nav-logo flex gap-2 items-center">
@@ -27,3 +28,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

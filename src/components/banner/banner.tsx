@@ -3,6 +3,7 @@ import banner from '../../../public/assets/banner/Frame.png'
 import Image from 'next/image';
 import { Button } from '../buttonGroup/button';
 const Banner = () => {
+
     return (
         <div className='max-w-screen max-h-screen relative'>
             <Image alt='' src={banner} />
