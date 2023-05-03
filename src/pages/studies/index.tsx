@@ -1,7 +1,26 @@
+import Counselling from "@/components/Counselling/Counselling";
 import CategoriesSidebar from "@/components/categories-components/CategoriesSidebar";
-
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const Categories = () => {
+    const router = useRouter()
+    const {category} = router.query;
+
+    const [courses, setCourses] = useState([]);
+    
+    useEffect(() => {
+        async function fetchData() {
+          const response = await fetch('http://localhost:5000/courses');
+          const data = await response.json();
+          setCourses(data);
+        }
+        fetchData();
+      }, []);
+
+      console.log(courses)
+
+    
     return (
         <section className="">
 
@@ -21,9 +40,16 @@ const Categories = () => {
                             <p className="text-gray-500">Page 1 | 108853 Bachelors</p>
                         </div>
                     </div>
-                    <div className="bg-[#edf3f6]">
-                        <div className="min-h-screen">
-
+                    <div className="bg-[#edf3f6] ml-96">
+                        <div className="min-h-screen grid gap-5 p-5">
+                            {
+                                courses?.filter((course:any) => {
+                                    return category === ""
+                                      ? []
+                                      : course?.category.includes(category);
+                                  })
+                                  .map((course: any) => <Counselling key={course._id} course={course}></Counselling>)
+                            }
                         </div>
                     </div>
                 </div>
