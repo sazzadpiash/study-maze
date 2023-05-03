@@ -102,7 +102,7 @@ const BrowseByCategory = () => {
             {/* #edf3f6 */}
             <div className="grid grid-cols-5 gap-[2px]">
                 {
-                    (userData as unknown as any)?.map((category :any,) => <CategoryCard key={category._id} category={category}></CategoryCard>)
+                    (userData as unknown as any)?.map((category :any) => <CategoryCard key={category._id} category={category}></CategoryCard>)
                         
                 }
             </div>

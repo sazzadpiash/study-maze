@@ -3,18 +3,18 @@ import CategoryItem from "./CategoryItem";
 
 
 const CategoriesSidebar = () => {
-    const [universities, setUniversities] = useState([]);
+    const [categories, setCategories] = useState([]);
     
     useEffect(() => {
         async function fetchData() {
           const response = await fetch('http://localhost:5000/categories');
           const data = await response.json();
-          setUniversities(data);
+          setCategories(data);
         }
         fetchData();
       }, []);
 
-      console.log(universities);
+      console.log(categories);
       
     
     return (
@@ -35,8 +35,8 @@ const CategoriesSidebar = () => {
                                 >
                                 </CategoryItem>
                             })} */}
-                            {universities?.length &&
-                            universities?.map((course: any) => {
+                            {categories?.length &&
+                            categories?.map((course: any) => {
                                 return <CategoryItem
                                     key={course?._id}
                                     category={course.name}

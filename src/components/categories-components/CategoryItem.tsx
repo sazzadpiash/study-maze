@@ -10,7 +10,7 @@ const CategoryItem = ({icon, category, location }: any) => {
     const isSelected = `/pages/category/${category?._id}` === location?.pathname;
     return (
         <li className={`${isSelected && "bg-black text-white w-full rounded-sm"} md:pl-2`} >
-            <Link href={``}>
+            <Link href={`/studies?category=${category}`}>
                 <button className="hover:text-[#f95c39]">
                     <div className="flex justify-start items-center">
                         <div className="mx-1">
