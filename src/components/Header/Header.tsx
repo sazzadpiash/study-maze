@@ -3,7 +3,10 @@ import logo from "../../../public/Assets/graduation-hat.png";
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FiHeart, FiUser } from 'react-icons/fi';
 import Link from "next/link";
+import { useContext } from "react";
+import { AuthContext } from "@/Context/AuthProvider";
 const Header = () => {
+
 
 
     return (

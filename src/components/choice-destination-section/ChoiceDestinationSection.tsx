@@ -3,7 +3,7 @@ import DestinationCard from "./DestinationCard";
 
 const ChoiceDestinationSection = () => {
 
-    const destinationData = [
+    const destinationData: any = [
         {
             _id: "destination001",
             image: "https://didmdw8v48h5q.cloudfront.net/wp-content/uploads/2023/01/Frame-10750.svg",
@@ -33,6 +33,8 @@ const ChoiceDestinationSection = () => {
 
 
 
+
+
     return (
         <section className="py-8 md:py-12 px-6 md:px-10">
             <div className="pt-8 md:pt-10 pb-4 md:pb-6">
@@ -47,10 +49,10 @@ const ChoiceDestinationSection = () => {
                 <DestinationCard></DestinationCard>
 
                 {/* {
-                    destinationData.map(data => {
+                    destinationData.map( (data : any )  => {
                         return <DestinationCard
                         key={data?._id}
-                        data={data}></DestinationCard>
+                        data  ={data}></DestinationCard>
                     })
                 } */}
 
