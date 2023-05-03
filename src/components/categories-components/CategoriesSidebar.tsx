@@ -4,16 +4,16 @@ import CategoryItem from "./CategoryItem";
 
 const CategoriesSidebar = () => {
     const [universities, setUniversities] = useState([]);
-    
+
     useEffect(() => {
         async function fetchData() {
-          const response = await fetch('http://localhost:5000/courses');
-          const data = await response.json();
-          setUniversities(data);
+            const response = await fetch('http://localhost:5000/course');
+            const data = await response.json();
+            setUniversities(data);
         }
         fetchData();
-      }, []);
-    
+    }, []);
+
     return (
         <section className="mx-2 md:mx-4">
             <div className="h-1 rounded-sm bg-[#f95c39] hidden md:block"></div>
@@ -32,7 +32,7 @@ const CategoriesSidebar = () => {
                                 >
                                 </CategoryItem>
                             })} */}
-                            {universities?.length &&
+                        {universities?.length &&
                             universities?.map((course: any) => {
                                 return <CategoryItem
                                     key={course?._id}
