@@ -1,5 +1,8 @@
 import Head from "next/head";
-const Blogs = () => {
+const Blogs = ({ myData, setmyData }: any, { itemsList }: any) => {
+    console.log(myData);
+    // setmyData(itemsList)
+
     return (
         <>
             <Head>
@@ -15,5 +18,16 @@ const Blogs = () => {
 
     );
 };
+
+export const getServerSideProps = async () => {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users`);
+    const itemsList = await res.json();
+
+    return {
+        props: {
+            itemsList
+        }
+    }
+}
 
 export default Blogs;
