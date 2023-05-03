@@ -13,14 +13,14 @@ const CategoryItem = ({ category, location }: any) => {
             <Link href={``}>
                 <button className="hover:text-[#f95c39]">
                     <div className="flex justify-start items-center">
-                        <div className="mx-1">
+                        {/* <div className="mx-1">
                             <img src={category?.icon} alt={category?.icon} className="w-4 h-4" />
-                        </div>
+                        </div> */}
                         <div className="flex text-sm">
                             <p className="text-left">
-                                {category?.category.length < 20 ? category?.category : category?.category.slice(0, 19)}
+                                {category.length < 20 ? category : category.slice(0, 19)}
                                 {
-                                    category?.category.length < 25 ? "" : "..."
+                                    category.length < 25 ? "" : "..."
                                 }
                             </p>
                             <p className="mx-4 text-gray-500">
