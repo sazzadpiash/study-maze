@@ -3,9 +3,9 @@ import { BsHeart } from 'react-icons/bs'
 import Image from 'next/image';
 import { SlLocationPin } from 'react-icons/sl';
 import Link from 'next/link';
-const Counselling = ({course}) => {
+const Counselling = ({course}: any) => {
     return (
-        <Link href={`/studies/${course._id}`}>
+        <Link href={`/studies/${course?._id}`}>
         <div className='flex justify-between bg-white px-8 rounded-lg shadow-lg shadow-slate-300 py-4'>
             <div>
                 <h3 className=" text-2xl font-bold mb-6">{course?.studyName}</h3>
