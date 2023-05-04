@@ -70,25 +70,25 @@ const CategoriesSidebar = () => {
             alt: "https://i.ibb.co/GVnFD08/journalism-alt.png"
         },
         {
-            _id: "category011",
+            _id: "category012",
             category: "Law",
             icon: "https://i.ibb.co/7QKZnbK/law.png",
             alt: "https://i.ibb.co/1JjtsV6/law-alt.png"
         },
         {
-            _id: "category012",
+            _id: "category013",
             category: "Medicine & Health",
             icon: "https://i.ibb.co/nMjTVvV/medicine.png",
             alt: "https://i.ibb.co/sKvG2Cw/medicine-alt.png"
         },
         {
-            _id: "category013",
+            _id: "category014",
             category: "Natural Sciences & Mathematics",
             icon: "https://i.ibb.co/zs3kZtJ/science.png",
             alt: "https://i.ibb.co/71jffqx/science-alt.png"
         },
         {
-            _id: "category014",
+            _id: "category015",
             category: "Social Sciences",
             icon: "https://i.ibb.co/T4w0GX2/social.png",
             alt: "https://i.ibb.co/PmS4VRF/social-alt.png"
