@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const Categories = () => {
     const router = useRouter()
-    const { category } = router.query;
+    const { category, location } = router.query;
 
     const [courses, setCourses] = useState([]);
 
