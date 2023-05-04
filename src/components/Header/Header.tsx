@@ -5,7 +5,7 @@ import { FiHeart, FiUser } from 'react-icons/fi';
 import Link from "next/link";
 const Header = () => {
     return (
-        <div className="h-16 px-20 flex items-center justify-between shadow">
+        <div className="h-16 px-20 sticky top-0 bg-white flex items-center justify-between shadow">
             <Link href="/" className="nav-logo flex gap-2 items-center">
                 <Image src={logo} alt="" className="w-8" />
                 <h2 className="text-xl font-medium"><span className="text-primary">Study</span><span className="text-secondary">maze</span></h2>

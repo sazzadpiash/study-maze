@@ -25,7 +25,7 @@ const Categories = () => {
         <section className="">
 
             <div className='text-2xl flex-none md:flex py-10 md:py-16'>
-                <div className=' w-full md:w-1/4 min-h-fit mx-2 md:mx-4 border-2 rounded-md static md:fixed'>
+                <div className=' w-full md:w-1/4 min-h-fit mx-2 md:mx-4 border-2 rounded-md static md:sticky'>
                     <div className="py-4 md:py-8 bg-white">
                         <div>
                             <CategoriesSidebar></CategoriesSidebar>
