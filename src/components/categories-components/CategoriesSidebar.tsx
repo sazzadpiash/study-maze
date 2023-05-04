@@ -15,8 +15,6 @@ const CategoriesSidebar = () => {
     }, []);
 
     console.log(universities);
-
-
     return (
         <section className="mx-2 md:mx-4">
             <div className="h-1 rounded-sm bg-[#f95c39] hidden md:block"></div>

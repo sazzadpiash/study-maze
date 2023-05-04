@@ -44,7 +44,7 @@ const Categories = () => {
                         <div className="min-h-screen grid gap-5 p-5">
                             {
                                 courses?.filter((course:any) => {
-                                    return !category || !location ? course : course?.category.includes(category) && course?.location.country.includes(location);
+                                    return category === ""? [] : course?.category.includes(category);
                                   })
                                   .map((course: any) => <Counselling key={course._id} course={course}></Counselling>)
                             }

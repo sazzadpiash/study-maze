@@ -9,8 +9,8 @@ const Header = () => {
     const [categories, setCategories] = useState();
     const router = useRouter();
     console.log(router)
-    const [searchCategory, setSearchCategory] =useState();
-    const [searchLocation, setSearchLocation] =useState();
+    const [searchCategory, setSearchCategory] =useState("");
+    const [searchLocation, setSearchLocation] =useState("");
 
     useEffect(() => {
         fetch('https://study-maze-server.vercel.app/categories')
