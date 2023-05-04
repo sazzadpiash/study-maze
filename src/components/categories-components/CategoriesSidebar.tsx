@@ -7,7 +7,7 @@ const CategoriesSidebar = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch('http://localhost:5000/categories');
+            const response = await fetch('https://study-maze-server.vercel.app/categories');
             const data = await response.json();
             setUniversities(data);
         }

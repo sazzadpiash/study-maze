@@ -32,7 +32,6 @@ export default function Home() {
         <LookingCourseSection></LookingCourseSection>
         <MoreHelpSection></MoreHelpSection>
         <Support />
-        <Counselling />
         <WhyChoose />
         <ServiceBlog></ServiceBlog>
         <ApplySection></ApplySection>

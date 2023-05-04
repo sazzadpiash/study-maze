@@ -11,7 +11,7 @@ const Categories = () => {
     
     useEffect(() => {
         async function fetchData() {
-          const response = await fetch('http://localhost:5000/courses');
+          const response = await fetch('https://study-maze-server.vercel.app/courses');
           const data = await response.json();
           setCourses(data);
         }
@@ -37,7 +37,7 @@ const Categories = () => {
                         <div className="col-span-1 md:col-span-2"></div>
                         <div className="col-span-1 md:col-span-5 py-2">
                             <h1 className="text-2xl md:text-3xl font-semibold mb-2">Bachelor's degrees from all around the world</h1>
-                            <p className="text-gray-500">Page 1 | 108853 Bachelors</p>
+                            <p className="text-gray-500">Page 1 | 108 Bachelors</p>
                         </div>
                     </div>
                     <div className="bg-[#edf3f6] ml-96">
