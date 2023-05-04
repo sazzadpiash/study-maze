@@ -1,7 +1,7 @@
 import { CiPercent, CiCircleInfo } from 'react-icons/ci'
 import { SlLocationPin } from 'react-icons/sl';
 import Link from 'next/link';
-const Counselling = ({ course }) => {
+const Counselling = ({ course }: any) => {
     return (
         <Link href={`/studies/${course?._id}`}>
             <div className='flex bg-white px-10 rounded-lg shadow-lg shadow-slate-300 py-7'>
@@ -28,7 +28,7 @@ const Counselling = ({ course }) => {
                     </div>
                     {/* <div className=' mt-12 mb-2 flex bg-red-50 rounded-xl pl-4'><p>Add to compare</p> <input className=' mt-1 ml-2' type="checkbox" name="" id="" /></div> */}
                     <div className='flex justify-end items-end'>
-                        <p className='text-right text-lg font-bold text-left '>{course?.duration} year</p>
+                        <p className='text-right text-lg font-bold'>{course?.duration} year</p>
 
                         {/* <p>Feature </p>
                         <CiCircleInfo className=' mt-1 ml-1' /> */}
