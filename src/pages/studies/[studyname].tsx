@@ -17,10 +17,10 @@ import { useEffect, useState } from "react";
 const studyname = () => {
     const router = useRouter();
     // const param = URLSearchParams();
-    const {studyname} = router.query;
+    const { studyname } = router.query;
     const [studyNameId, setStudyNameId] = useState('');
     const [courses, setCourses] = useState([]);
-
+    const { category, degree, description, duration, institute, location, photo, programme, studyName, tuitionFee }: any = courses;
     // console.log(router?.query?.studyname);
 
 
@@ -40,21 +40,21 @@ const studyname = () => {
 
     }, [studyname]);
 
-    console.log(courses)
+    console.log(courses, category)
 
 
     return (
         <div>
             <div className="relative">
                 <div className="max-h-screen overflow-hidden relative">
-                    <Image className="object-cover w-full h-full" src={cover} alt="cover_photo" />
+                    <img src={photo?.background} className="w-full" alt="" srcSet="" />
                 </div>
                 <div className="absolute top-0 left-0 w-full h-full p-20 grid items-end">
                     <div className="grid grid-cols-12 items-end">
                         <div className="col-span-4 bg-white rounded p-6 grid items-start gap-5 shadow-md">
                             <div className="flex items-center justify-between w-full">
                                 <div className="flex gap-3">
-                                    <button className="border border-[#05293C] rounded-full text-sm py-2 px-3">B.Sc.</button>
+                                    <button className="border border-[#05293C] rounded-full text-sm py-2 px-3">{degree}</button>
                                     <button className="border border-[#05293C] rounded-full text-sm py-2 px-3">On Campus</button>
                                 </div>
                                 <div>
@@ -62,8 +62,8 @@ const studyname = () => {
                                 </div>
                             </div>
                             <div>
-                                <p className="text-[#05293C] text-sm mb-2">Harvard University</p>
-                                <h1 className="flex items-start gap-3 font-bold text-2xl text-[#05293C]"><FaUniversity className="text-3xl" /> Computer Science & Engineering</h1>
+                                <p className="text-[#05293C] text-sm mb-2">{institute}</p>
+                                <h1 className="flex items-start gap-3 font-bold text-2xl text-[#05293C]"><FaUniversity className="text-3xl" />{studyName}</h1>
                             </div>
                             <div>
                                 <button className="bg-primary hover:bg-[#f95c39d2] transition flex items-center gap-2 justify-center text-white font-semibold text-lg py-2 rounded w-full">Apply <FaRegPaperPlane /></button>
@@ -76,14 +76,14 @@ const studyname = () => {
                         <div className="flex justify-center items-start gap-2">
                             <span className="text-3xl text-[#05293C]"><MdOutlineWatchLater /></span>
                             <div>
-                                <h1 className="text-2xl text-[#05293C] font-bold">4 Years</h1>
+                                <h1 className="text-2xl text-[#05293C] font-bold">{duration} Years</h1>
                                 <p>Duration</p>
                             </div>
                         </div>
                         <div className="flex justify-center items-start gap-2">
                             <span className="text-3xl text-[#05293C]"><MdOutlineAttachMoney /></span>
                             <div>
-                                <h1 className="text-2xl text-[#05293C] font-bold">10,137 EUR<span className="text-base font-normal">/year</span></h1>
+                                <h1 className="text-2xl text-[#05293C] font-bold">{tuitionFee} EUR<span className="text-base font-normal">/year</span></h1>
                                 <p>Tution fee</p>
                             </div>
                         </div>
@@ -108,14 +108,14 @@ const studyname = () => {
             <div className="px-24 pt-24 pb-16 grid grid-cols-12 gap-10">
                 <div className="col-span-8">
                     <h2 className="text-2xl text-[#05293C] font-bold mb-3">About</h2>
-                    <p className="text-lg">The Agricultural Science program at South Dakota State University offers students a practical, well-rounded education in agriculture. Because of their comprehensive background, Ag Science majors are placed in a wide variety of professional capacities in the agricultural industry, including sales, business, management, and production.</p>
+                    <p className="text-lg">{description}</p>
                 </div>
                 <div className="col-span-4 shadow-md p-5 border rounded">
                     <div className="flex gap-5 mb-5">
-                        <Image className="w-14 h-14" src={logo} alt="logo" />
+                        <img src={photo?.logo} className="w-14 h-14" alt="" srcSet="" />
                         <div>
-                            <h2 className="text-xl text-[#05293C]">Harvard University</h2>
-                            <p className="text-sm">Cambridge, United States</p>
+                            <h2 className="text-xl text-[#05293C]">{institute}</h2>
+                            <p className="text-sm">{location?.state} , {location?.country}</p>
                         </div>
                     </div>
                     <div className="grid grid-cols-2 justify-between mb-5">
@@ -137,7 +137,7 @@ const studyname = () => {
                         </div>
                     </div>
                     <p className="text-sm">Featured by</p>
-                    <Link href="" className="text-sm text-[#05293C] hover:underline flex items-center gap-1">Harvard University <BsArrowRight /></Link>
+                    <Link href="" className="text-sm text-[#05293C] hover:underline flex items-center gap-1">{institute} <BsArrowRight /></Link>
                 </div>
             </div>
             <SimilarProgrammes></SimilarProgrammes>

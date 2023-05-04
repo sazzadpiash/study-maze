@@ -5,25 +5,24 @@ import { useEffect, useState } from "react";
 
 const Categories = () => {
     const router = useRouter()
-    const {category} = router.query;
+    const { category } = router.query;
 
     const [courses, setCourses] = useState([]);
-    
+
     useEffect(() => {
         async function fetchData() {
-          const response = await fetch('https://study-maze-server.vercel.app/courses');
-          const data = await response.json();
-          setCourses(data);
+            const response = await fetch('https://study-maze-server.vercel.app/courses');
+            const data = await response.json();
+            setCourses(data);
         }
         fetchData();
-      }, []);
+    }, []);
 
-      console.log(courses)
+    console.log(courses)
 
-    
+
     return (
         <section className="">
-
             <div className='text-2xl flex-none md:flex py-10 md:py-16'>
                 <div className=' w-full md:w-1/4 min-h-fit mx-2 md:mx-4 border-2 rounded-md static md:fixed'>
                     <div className="py-4 md:py-8 bg-white">
@@ -43,12 +42,12 @@ const Categories = () => {
                     <div className="bg-[#edf3f6] ml-96">
                         <div className="min-h-screen grid gap-5 p-5">
                             {
-                                courses?.filter((course:any) => {
+                                courses?.filter((course: any) => {
                                     return category === ""
-                                      ? []
-                                      : course?.category.includes(category);
-                                  })
-                                  .map((course: any) => <Counselling key={course._id} course={course}></Counselling>)
+                                        ? []
+                                        : course?.category.includes(category);
+                                })
+                                    .map((course: any) => <Counselling key={course._id} course={course}></Counselling>)
                             }
                         </div>
                     </div>

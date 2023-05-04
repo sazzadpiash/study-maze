@@ -38,7 +38,7 @@ const Register = () => {
                         alt=''
                     ></Image>
                 </div>
-                <div className='p-5 shadow-md shadow-black'>
+                <div className='p-5'>
                     <h1 className='text-center text-gray-700 font-bold text-xl'>Sign up with</h1>
                     <div className='flex lg:w-1/2 mx-auto justify-evenly lg:justify-between my-5'>
                         <button className='flex items-center font-semibold border focus:border-secondary px-2 py-1 rounded-sm text-gray-700 shadow-2xl hover:bg-blue-200 hover:shadow-xl hover:translate-x-100 hover:delay-200 hover:duration-300'>
@@ -58,14 +58,14 @@ const Register = () => {
                             <FaUser className='absolute left-5 lg:left-14 lg:top-3 text-gray-700 w-4 h-4'></FaUser>
                             <input type="text"
                                 {...register("fullName", { required: "full name is required" })}
-                                className='w-full lg:w-4/5 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none border focus:border-secondary' placeholder='Full Name' />
+                                className='w-full lg:w-4/5 shadow-sm px-8 py-2 rounded-sm focus:shadow-xl outline-none border focus:border-secondary' placeholder='Full Name' />
                             {errors.fullName && <small role='alert' className='text-red-600 text-sm'>{errors.fullName?.message}</small>}
                         </div>
                         <div className='flex flex-col space-x-3 items-center relative justify-around'>
                             <HiMail className='absolute left-5 lg:left-14 lg:top-3 text-gray-700 w-4 h-4'></HiMail>
                             <input type="email"
                                 {...register("email", { required: "email is required" })}
-                                className='w-full lg:w-4/5 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none border focus:border-secondary' placeholder='Email' />
+                                className='w-full lg:w-4/5 shadow-sm px-8 py-2 rounded-sm focus:shadow-xl outline-none border focus:border-secondary' placeholder='Email' />
                             {errors.email && <small role='alert' className='text-red-600 text-sm'>{errors.email?.message}</small>}
                         </div>
                         <div className='flex flex-col space-x-3 items-center relative justify-around'>
@@ -76,7 +76,7 @@ const Register = () => {
                                         required: "required",
                                         minLength: { value: 6, message: "your password should be at least 6 characters" }
                                     })}
-                                className='w-full lg:w-4/5 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none border focus:border-secondary' placeholder='Password' />
+                                className='w-full lg:w-4/5 shadow-sm px-8 py-2 rounded-sm focus:shadow-xl outline-none border focus:border-secondary' placeholder='Password' />
                             {errors.password && <small role='alert' className='text-red-600 text-sm'>{errors.password?.message}</small>}
                         </div>
                         <div className='text-center'>
