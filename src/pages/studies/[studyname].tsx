@@ -10,9 +10,25 @@ import Link from "next/link";
 import SimilarProgrammes from "@/components/SimilarProgrammes/SimilarProgrammes";
 import OurPartners from "@/components/OurPartners/OurPartners";
 import Scholarship from "@/components/Scholarship/Scholarship";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 
 const studyname = () => {
+    const router = useRouter()
+    const {studyname} = router.query;
+    const [courses, setCourses] = useState([]);
+    
+    // useEffect(() => {
+    //     async function fetchData() {
+    //       const response = await fetch(`http://localhost:5000/courses/${studyname}`);
+    //       const data = await response.json();
+    //       setCourses(data);
+    //     }
+    //     fetchData();
+    //   }, []);
+
+    
     return (
         <div>
             <div className="relative">

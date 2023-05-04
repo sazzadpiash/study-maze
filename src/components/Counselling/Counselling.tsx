@@ -11,7 +11,7 @@ const Counselling = ({ course }) => {
 
                     <p className='mt-8 mb-6 text-lg font-semibold'>{course?.degree} <span className="text-red-500">/</span> Part-Time <span className="text-red-500">/</span> Blended</p>
                     <div className='flex items-start gap-3'>
-                        <img width="40" height="40" className="w-10 h-10" src={course.photo.logo} alt="logo" />
+                        <img width="40" height="40" className="w-10 h-10" src={course?.photo?.logo} alt="logo" />
                         <div>
                             <p className='text-[#05293C] text-sm mb-1'>{course?.institute}</p>
                             <p className='text-xs flex items-center gap-1 text-slate-600'><SlLocationPin />{course?.location.state}, {course?.location.country}</p>

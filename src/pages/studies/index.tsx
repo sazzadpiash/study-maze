@@ -25,7 +25,7 @@ const Categories = () => {
         <section className="">
 
             <div className='text-2xl flex-none md:flex py-10 md:py-16'>
-                <div className=' w-full md:w-1/4 min-h-fit mx-2 md:mx-4 border-2 rounded-md static md:sticky'>
+                <div className=' w-full md:w-1/4 min-h-fit mx-2 md:mx-4 border-2 rounded-md static md:fixed'>
                     <div className="py-4 md:py-8 bg-white">
                         <div>
                             <CategoriesSidebar></CategoriesSidebar>
@@ -37,7 +37,7 @@ const Categories = () => {
                         <div className="col-span-1 md:col-span-2"></div>
                         <div className="col-span-1 md:col-span-5 py-2">
                             <h1 className="text-2xl md:text-3xl font-semibold mb-2">Bachelor's degrees from all around the world</h1>
-                            <p className="text-gray-500">Page 1 | 108853 Bachelors</p>
+                            <p className="text-gray-500">Page 1 | 108 Bachelors</p>
                         </div>
                     </div>
                     <div className="bg-[#edf3f6] ml-96">
