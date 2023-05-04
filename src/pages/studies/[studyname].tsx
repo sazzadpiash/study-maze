@@ -15,20 +15,34 @@ import { useEffect, useState } from "react";
 
 
 const studyname = () => {
-    const router = useRouter()
+    const router = useRouter();
+    // const param = URLSearchParams();
     const {studyname} = router.query;
+    const [studyNameId, setStudyNameId] = useState('');
     const [courses, setCourses] = useState([]);
-    
-    // useEffect(() => {
-    //     async function fetchData() {
-    //       const response = await fetch(`http://localhost:5000/courses/${studyname}`);
-    //       const data = await response.json();
-    //       setCourses(data);
-    //     }
-    //     fetchData();
-    //   }, []);
 
-    
+    // console.log(router?.query?.studyname);
+
+
+    // useEffect(()=>{
+    //     setStudyNameId(studyname)
+    // }, [studyname])
+
+    useEffect(() => {
+        async function fetchData() {
+            const response = await fetch(`https://study-maze-server.vercel.app/courses/${studyname}`);
+            const data = await response.json();
+            setCourses(data);
+        }
+        if (studyname !== undefined) {
+            fetchData();
+        }
+
+    }, [studyname]);
+
+    console.log(courses)
+
+
     return (
         <div>
             <div className="relative">
@@ -112,18 +126,18 @@ const studyname = () => {
                         <div>
                             <h2 className="text-xl text-[#05293C] flex items-center gap-2">4.4
                                 <span className="text-[#FFD700] flex text-base">
-                                    <BsStarFill/>
-                                    <BsStarFill/>
-                                    <BsStarFill/>
-                                    <BsStarFill/>
-                                    <BsStarHalf/>
+                                    <BsStarFill />
+                                    <BsStarFill />
+                                    <BsStarFill />
+                                    <BsStarFill />
+                                    <BsStarHalf />
                                 </span>
                             </h2>
                             <p className="text-sm">6 reviews</p>
                         </div>
                     </div>
                     <p className="text-sm">Featured by</p>
-                    <Link href="" className="text-sm text-[#05293C] hover:underline flex items-center gap-1">Harvard University <BsArrowRight/></Link>
+                    <Link href="" className="text-sm text-[#05293C] hover:underline flex items-center gap-1">Harvard University <BsArrowRight /></Link>
                 </div>
             </div>
             <SimilarProgrammes></SimilarProgrammes>

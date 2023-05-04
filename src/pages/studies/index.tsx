@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 
 const Categories = () => {
     const router = useRouter()
-    const {category} = router.query;
+    const {category, location} = router.query;
 
     const [courses, setCourses] = useState([]);
     
     useEffect(() => {
         async function fetchData() {
-          const response = await fetch('http://localhost:5000/courses');
+          const response = await fetch('https://study-maze-server.vercel.app/courses');
           const data = await response.json();
           setCourses(data);
         }
@@ -44,9 +44,7 @@ const Categories = () => {
                         <div className="min-h-screen grid gap-5 p-5">
                             {
                                 courses?.filter((course:any) => {
-                                    return category === ""
-                                      ? []
-                                      : course?.category.includes(category);
+                                    return !category || !location ? course : course?.category.includes(category) && course?.location.country.includes(location);
                                   })
                                   .map((course: any) => <Counselling key={course._id} course={course}></Counselling>)
                             }
