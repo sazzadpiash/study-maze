@@ -9,8 +9,8 @@ const Header = () => {
     const [categories, setCategories] = useState();
     const router = useRouter();
     console.log(router)
-    const [searchCategory, setSearchCategory] =useState("");
-    const [searchLocation, setSearchLocation] =useState("");
+    const [searchCategory, setSearchCategory] = useState("");
+    const [searchLocation, setSearchLocation] = useState("");
 
     useEffect(() => {
         fetch('https://study-maze-server.vercel.app/categories')
@@ -23,12 +23,12 @@ const Header = () => {
             });
     }, []);
 
-    const handleCategory =(event: any) =>{
+    const handleCategory = (event: any) => {
         const category = event.target.value;
         setSearchCategory(category)
         console.log(category)
     }
-    const handleLocation =(event: any) =>{
+    const handleLocation = (event: any) => {
         const location = event.target.value;
         setSearchLocation(location)
     }
@@ -56,7 +56,7 @@ const Header = () => {
                             <option value="Ireland">Ireland</option>
                             <option value="United Kingdom">United Kingdom</option>
                         </select>
-                        <Link href={`http://localhost:3000/studies?category=${searchCategory}&location=${searchLocation}`} className="flex items-center bg-primary text-white px-3 rounded-r text-xl"><AiOutlineSearch /></Link>
+                        <Link href={`/studies?category=${searchCategory}&location=${searchLocation}`} className="flex items-center bg-primary text-white px-3 rounded-r text-xl"><AiOutlineSearch /></Link>
                     </form>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import Link from 'next/link';
 const ProgrammeCard = () => {
     const [course, setCourse] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/courses`)
+        fetch(`https://study-maze-server.vercel.app/courses`)
             .then(res => res.json())
             .then(data => {
                 setCourse(data.slice(0, 4));
