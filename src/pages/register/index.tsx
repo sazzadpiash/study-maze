@@ -7,9 +7,27 @@ import { HiMail, HiPhone } from "react-icons/hi";
 import Styles from '../../styles/Button.module.css'
 import { useState } from 'react'
 import Meta from '@/components/head/meta';
+import Link from 'next/link';
+import { useForm } from 'react-hook-form';
+type FormData = {
+    fullName: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
+
+};
+
+
 const Register = () => {
 
     const [check, setUnCheck] = useState(false)
+    const { register, handleSubmit, reset, watch, formState: { errors } } = useForm<FormData>();
+
+    const onSubmit = (data: any) => {
+        console.log(data);
+        reset()
+    }
+
     return (
         <>
             <Meta title="register"></Meta>
@@ -23,56 +41,47 @@ const Register = () => {
                 <div className='p-5 shadow-md shadow-black'>
                     <h1 className='text-center text-gray-700 font-bold text-xl'>Sign up with</h1>
                     <div className='flex lg:w-1/2 mx-auto justify-evenly lg:justify-between my-5'>
-                        <button className='flex items-center font-semibold bg-orange-200 px-2 py-1 rounded-sm text-gray-700 shadow-2xl hover:bg-blue-200 hover:shadow-xl hover:translate-x-100 hover:delay-200 hover:duration-300'>
+                        <button className='flex items-center font-semibold border focus:border-secondary px-2 py-1 rounded-sm text-gray-700 shadow-2xl hover:bg-blue-200 hover:shadow-xl hover:translate-x-100 hover:delay-200 hover:duration-300'>
                             <Image width={35} alt='' src={facebook}>
                             </Image>
                             facebook
                         </button>
-                        <button className='flex items-center font-semibold bg-orange-200 px-2 py-1 rounded-sm text-gray-700 shadow-2xl hover:bg-blue-200 hover:shadow-xl hover:translate-x-100 hover:delay-200 hover:duration-300'>
+                        <button className='flex items-center font-semibold border focus:border-secondary px-2 py-1 rounded-sm text-gray-700 shadow-2xl hover:bg-blue-200 hover:shadow-xl hover:translate-x-100 hover:delay-200 hover:duration-300'>
                             <Image width={35} alt='' src={google}>
                             </Image>
                             Google
                         </button>
                     </div>
                     <h1 className='text-center text-gray-700 font-bold pt-5'>Or Sign up with your email</h1>
-                    <form className='pt-5 space-y-5'>
-                        <div className='flex space-x-3 items-center relative justify-around'>
-                            <FaUser className='absolute left-5 lg:left-14 text-gray-700 w-4 h-4'></FaUser>
-                            <input type="text" className='w-full lg:w-4/5 bg-orange-200 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none' placeholder='First Name' />
+                    <form className='pt-5 space-y-5' onSubmit={handleSubmit(onSubmit)}>
+                        <div className='flex flex-col space-x-3 items-center relative justify-around'>
+                            <FaUser className='absolute left-5 lg:left-14 lg:top-3 text-gray-700 w-4 h-4'></FaUser>
+                            <input type="text"
+                                {...register("fullName", { required: "full name is required" })}
+                                className='w-full lg:w-4/5 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none border focus:border-secondary' placeholder='Full Name' />
+                            {errors.fullName && <small role='alert' className='text-red-600 text-sm'>{errors.fullName?.message}</small>}
                         </div>
-                        <div className='flex space-x-3 items-center relative justify-around'>
-                            <FaUser className='absolute left-5 lg:left-14 text-gray-700 w-4 h-4'></FaUser>
-                            <input type="text" className='w-full lg:w-4/5 bg-orange-200 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none' placeholder='Last Name' />
+                        <div className='flex flex-col space-x-3 items-center relative justify-around'>
+                            <HiMail className='absolute left-5 lg:left-14 lg:top-3 text-gray-700 w-4 h-4'></HiMail>
+                            <input type="email"
+                                {...register("email", { required: "email is required" })}
+                                className='w-full lg:w-4/5 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none border focus:border-secondary' placeholder='Email' />
+                            {errors.email && <small role='alert' className='text-red-600 text-sm'>{errors.email?.message}</small>}
                         </div>
-                        <div className='flex space-x-3 items-center relative justify-around'>
-                            <HiMail className='absolute left-5 lg:left-14 text-gray-700 w-4 h-4'></HiMail>
-                            <input type="email" className='w-full lg:w-4/5 bg-orange-200 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none' placeholder='Email' />
-                        </div>
-                        <div className='flex space-x-3 items-center relative justify-around'>
-                            <FaLock className='absolute left-5 lg:left-14 text-gray-700 w-4 h-4'></FaLock>
-                            <input type="password" className='w-full lg:w-4/5 bg-orange-200 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none' placeholder='Password' />
-                        </div>
-                        <div className='flex space-x-3 items-center relative justify-around'>
-                            <FaLock className='absolute left-5 lg:left-14 text-gray-700 w-4 h-4'></FaLock>
-                            <input type="password" className='w-full lg:w-4/5 bg-orange-200 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none' placeholder='Confirm Password' />
-                        </div>
-                        <div className='flex space-x-3 items-center relative justify-around'>
-                            <HiPhone className='absolute left-5 lg:left-16 text-gray-700 w-4 h-4'></HiPhone>
-                            <input type="text" className='w-full lg:w-4/5 bg-orange-200 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none' placeholder='Number' />
-                        </div>
-                        <div className='flex space-x-3 items-center relative justify-around '>
-                            <FaHandSparkles className='absolute left-5 lg:left-16 text-gray-700 w-5 h-5'></FaHandSparkles>
-                            <select name="" id="" className='w-full lg:w-4/5 bg-orange-200 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none'>
-                                <option value="nationality">Nationality</option>
-                                <option value="bangladesh">Bangladesh</option>
-                                <option value="pakistan">Pakistan</option>
-                                <option value="india">India</option>
-                                <option value="afghanistan">Afghanistan</option>
-                            </select>
+                        <div className='flex flex-col space-x-3 items-center relative justify-around'>
+                            <FaLock className='absolute left-5 lg:left-14 lg:top-3 text-gray-700 w-4 h-4'></FaLock>
+                            <input type="password"
+                                {...register("password",
+                                    {
+                                        required: "required",
+                                        minLength: { value: 6, message: "your password should be at least 6 characters" }
+                                    })}
+                                className='w-full lg:w-4/5 shadow-2xl px-8 py-2 rounded-sm focus:shadow-xl outline-none border focus:border-secondary' placeholder='Password' />
+                            {errors.password && <small role='alert' className='text-red-600 text-sm'>{errors.password?.message}</small>}
                         </div>
                         <div className='text-center'>
                             <span className='text-gray-700'>
-                                <input onChange={() => setUnCheck(!check)} checked={check} className='mr-4' type="checkbox" />
+                                <input onChange={() => setUnCheck(!check)} checked={check} className='mr-4' type="checkbox" required />
                                 I have read and agree to the <a href="#" className='text-blue-600'>Terms and Conditions</a> <br />   and the <a href="#" className='text-blue-600'>Privacy and Cookies Policy*</a>.
                             </span>
                         </div>
@@ -80,7 +89,7 @@ const Register = () => {
                             <button type='submit' className={`${Styles.btnGroup}`} disabled={!check}>Create Account</button>
                         </div>
                         <div className='text-center'>
-                            <span>Already have an account? <a href="" className='text-blue-400'>Login</a></span>
+                            <span>Already have an account? <Link href="/login" className='text-blue-400'>Login</Link></span>
                         </div>
                     </form>
                 </div>
