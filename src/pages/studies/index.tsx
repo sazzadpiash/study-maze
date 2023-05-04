@@ -11,7 +11,7 @@ const Categories = () => {
     
     useEffect(() => {
         async function fetchData() {
-          const response = await fetch('http://localhost:5000/courses');
+          const response = await fetch('https://study-maze-server.vercel.app/courses');
           const data = await response.json();
           setCourses(data);
         }
