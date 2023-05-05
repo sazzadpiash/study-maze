@@ -20,8 +20,6 @@ const Categories = () => {
         fetchData();
     }, []);
 
-    console.log(courses);
-
     return (
         <section className="">
             <div className="text-2xl flex-none md:flex py-10 md:py-16">
