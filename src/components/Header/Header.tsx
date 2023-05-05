@@ -3,14 +3,13 @@ import logo from "../../../public/Assets/graduation-hat.png";
 import { AiOutlineSearch } from 'react-icons/ai';
 import { FiHeart, FiUser } from 'react-icons/fi';
 import Link from "next/link";
-
 const Header = () => {
     return (
         <div className="h-16 px-20 flex items-center justify-between shadow">
-            <div className="nav-logo flex gap-2 items-center">
+            <Link href="/" className="nav-logo flex gap-2 items-center">
                 <Image src={logo} alt="" className="w-8" />
                 <h2 className="text-xl font-medium"><span className="text-primary">Study</span><span className="text-secondary">maze</span></h2>
-            </div>
+            </Link>
             <div>
                 <div className="flex">
                     <input className="outline-none border rounded-l text-sm px-3 py-2 focus:border-primary" type="text" placeholder="What to study?" />
@@ -27,3 +26,5 @@ const Header = () => {
 };
 
 export default Header;
+
+

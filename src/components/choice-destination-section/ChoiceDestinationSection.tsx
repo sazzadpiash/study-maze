@@ -42,19 +42,12 @@ const ChoiceDestinationSection = () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-3 py-6 md:py-10">
 
-                <DestinationCard></DestinationCard>
-                <DestinationCard></DestinationCard>
-                <DestinationCard></DestinationCard>
-                <DestinationCard></DestinationCard>
-                <DestinationCard></DestinationCard>
-
-                {/* {
-                    destinationData.map( (data : any )  => {
-                        return <DestinationCard
-                        key={data?._id}
-                        data  ={data}></DestinationCard>
-                    })
-                } */}
+                {
+                    destinationData.map((country: any) => <DestinationCard
+                        key={country?._id}
+                        data={country}></DestinationCard>
+                    )
+                }
 
 
             </div>

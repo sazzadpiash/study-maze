@@ -9,7 +9,7 @@ const HelpVideoSection = () => {
             <div>
                 <center>
                     <video preload="none" crossOrigin="anonymous" playsInline tabIndex={0} poster="assets/images/help-image-section/poster/help-video-poster.gif" className="w-full md:w-1/2 mx-2 md:mx-0 rounded-md" controls>
-                        <source src="/assets/media/videos/help-section-video.mp4" />
+                        <source src="https://vimeo.com/822600148" />
                     </video>
                 </center>
             </div>
