@@ -6,9 +6,7 @@ import { useEffect, useState } from "react";
 const Categories = () => {
     const router = useRouter();
     const { category, location } = router.query;
-
     const [courses, setCourses] = useState([]);
-
     useEffect(() => {
         async function fetchData() {
             const response = await fetch(
