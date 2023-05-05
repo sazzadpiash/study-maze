@@ -3,6 +3,8 @@ import CategoryItem from "./CategoryItem";
 
 
 const CategoriesSidebar = () => {
+
+
     const [universities, setUniversities] = useState([]);
 
     useEffect(() => {
@@ -13,6 +15,9 @@ const CategoriesSidebar = () => {
         }
         fetchData();
     }, []);
+
+    // console.log(universities);
+
 
     console.log(universities);
     return (
@@ -25,14 +30,6 @@ const CategoriesSidebar = () => {
                 <div className='mt-2'>
                     <ul className='text-sm md:text-lg font-semibold ml-2 md:ml-4 grid grid-cols-2 md:grid-cols-1 gap-3 md:gap-1 md:text-start'>
 
-                        {/* {categories?.length &&
-                            categories?.map((category: any) => {
-                                return <CategoryItem
-                                    key={category?._id}
-                                    category={category}
-                                >
-                                </CategoryItem>
-                            })} */}
                         {universities?.length &&
                             universities?.map((course: any) => {
                                 return <CategoryItem

@@ -5,13 +5,21 @@ import { useEffect, useState } from "react";
 
 const Categories = () => {
     const router = useRouter()
+<<<<<<< HEAD
+    const { category } = router.query;
+=======
     const { category, location } = router.query;
+>>>>>>> 7d82bdee5bec36af3a18be1c0c87b3f50e9cd80e
 
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
+<<<<<<< HEAD
+            const response = await fetch('http://localhost:5000/courses');
+=======
             const response = await fetch('https://study-maze-server.vercel.app/courses');
+>>>>>>> 7d82bdee5bec36af3a18be1c0c87b3f50e9cd80e
             const data = await response.json();
             setCourses(data);
         }
