@@ -77,7 +77,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <p className="text-center py-3 text-white bg-primary">Copyright © 2023 Studymaze</p>
+            <p className="text-center py-3 text-white bg-primary">Copyright © 2023 StudyMaze</p>
         </div>
     );
 };

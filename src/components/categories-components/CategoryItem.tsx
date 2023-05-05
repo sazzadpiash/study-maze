@@ -3,10 +3,7 @@ import { useContext } from "react";
 
 
 const CategoryItem = ({ icon, category, location }: any) => {
-    // const { products } : any = useContext();
-    // const availableProducts = products.filter(product => product?.inStock === "available")
-    // const count = availableProducts?.filter(product => product?.categoryId === category?._id)
-    // const location = useLocation()
+
     const isSelected = `/pages/category/${category?._id}` === location?.pathname;
     return (
         <li className={`${isSelected && "bg-black text-white w-full rounded-sm"} md:pl-2`} >
@@ -23,9 +20,7 @@ const CategoryItem = ({ icon, category, location }: any) => {
                                     category.length < 30 ? "" : "..."
                                 }
                             </p>
-                            {/* <p className="mx-4 text-gray-500">
-                                (1000)
-                            </p> */}
+
                         </div>
                     </div>
                 </button>

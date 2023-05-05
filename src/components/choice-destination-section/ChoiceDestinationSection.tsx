@@ -36,7 +36,7 @@ const ChoiceDestinationSection = () => {
 
 
     return (
-        <section className="py-8 md:py-12 px-6 md:px-10">
+        <section className="py-8 md:pt-12 px-6 md:px-10">
             <div className="pt-8 md:pt-10 pb-4 md:pb-6">
                 <h1 className="text-2xl md:text-5xl text-center font-bold">Choose Your Study Abroad Destination</h1>
             </div>

@@ -10,28 +10,28 @@ const WhyChoose = () => {
                 <div>
                     <div className='flex justify-center mb-6'><Image className=' w-40 h-40' src={degree} alt=''></Image></div>
                     <p className=' text-xl text-center'> <span className=' text-secondary'>Improve Your Chance of <br /> Admission Success</span> <br /> <br />
-Students who use Studymaze <br />
-have a 95% acceptance rate.</p>
+                        Students who use StudyMaze <br />
+                        have a 95% acceptance rate.</p>
 
-<div className=" left-1/2 -ml-0.5 w-0.5  bg-gray-600"></div>
+                    <div className=" left-1/2 -ml-0.5 w-0.5  bg-gray-600"></div>
                 </div>
                 <div>
                     <div className='flex justify-center mb-6'><Image className=' w-40 h-40' src={grade} alt=''></Image></div>
                     <p className=' text-xl text-center'> <span className=' text-secondary'>More Opportunity
- <br /> at Less Cost</span> <br /> <br />
- You’ll spend half the
- <br />
- time and money to get an offer.</p>
+                        <br /> at Less Cost</span> <br /> <br />
+                        You’ll spend half the
+                        <br />
+                        time and money to get an offer.</p>
                 </div>
                 <div>
                     <div className='flex justify-center mb-6'><Image className=' w-40 h-40' src={handShake} alt=''></Image></div>
                     <p className=' text-xl text-center'> <span className=' text-secondary'>Your One-Stop
- <br /> Study Maze Shop</span> <br /> <br />
- Access exclusive deals on <br /> application fees, flights, expert <br /> advice, and more.</p>
+                        <br /> Study Maze Shop</span> <br /> <br />
+                        Access exclusive deals on <br /> application fees, flights, expert <br /> advice, and more.</p>
 
 
                 </div>
-               
+
             </div>
         </div>
     );
