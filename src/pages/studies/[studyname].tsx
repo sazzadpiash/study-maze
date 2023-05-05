@@ -66,7 +66,9 @@ const studyname = () => {
                                 <h1 className="flex items-start gap-3 font-bold text-2xl text-[#05293C]"><FaUniversity className="text-3xl" />{studyName}</h1>
                             </div>
                             <div>
-                                <button className="bg-primary hover:bg-[#f95c39d2] transition flex items-center gap-2 justify-center text-white font-semibold text-lg py-2 rounded w-full">Apply <FaRegPaperPlane /></button>
+                                <Link href={`/studies/apply`}>
+                                    <button className="bg-primary hover:bg-[#f95c39d2] transition flex items-center gap-2 justify-center text-white font-semibold text-lg py-2 rounded w-full">Apply <FaRegPaperPlane /></button>
+                                </Link>
                             </div>
                         </div>
                     </div>

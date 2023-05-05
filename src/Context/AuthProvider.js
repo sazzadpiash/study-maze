@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import {
-    GoogleAuthProvider,
+  GoogleAuthProvider,
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
@@ -46,7 +46,7 @@ const AuthProvider = ({ children }) => {
     return () => unsubscribe();
   }, []);
 
-  const authInfo = {user, loading, createUser, login, signInwithGoogle, logOut}
+  const authInfo = { user, loading, createUser, login, signInwithGoogle, logOut }
 
   return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
 };
