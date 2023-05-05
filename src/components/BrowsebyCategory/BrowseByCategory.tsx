@@ -84,7 +84,7 @@ const BrowseByCategory = () => {
     const [userData, setUserData] = useState()
 
     useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('https://study-maze-server.vercel.app/categories')
           .then(response => response.json())
           .then(data => {
             setUserData(data);

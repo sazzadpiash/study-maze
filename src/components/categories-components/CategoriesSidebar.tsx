@@ -9,7 +9,7 @@ const CategoriesSidebar = () => {
 
     useEffect(() => {
         async function fetchData() {
-            const response = await fetch('http://localhost:5000/categories');
+            const response = await fetch('https://study-maze-server.vercel.app/categories');
             const data = await response.json();
             setUniversities(data);
         }
@@ -19,6 +19,7 @@ const CategoriesSidebar = () => {
     // console.log(universities);
 
 
+    console.log(universities);
     return (
         <section className="mx-2 md:mx-4">
             <div className="h-1 rounded-sm bg-[#f95c39] hidden md:block"></div>

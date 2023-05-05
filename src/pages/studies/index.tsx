@@ -5,13 +5,21 @@ import { useEffect, useState } from "react";
 
 const Categories = () => {
     const router = useRouter()
+<<<<<<< HEAD
     const { category } = router.query;
+=======
+    const { category, location } = router.query;
+>>>>>>> 7d82bdee5bec36af3a18be1c0c87b3f50e9cd80e
 
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
+<<<<<<< HEAD
             const response = await fetch('http://localhost:5000/courses');
+=======
+            const response = await fetch('https://study-maze-server.vercel.app/courses');
+>>>>>>> 7d82bdee5bec36af3a18be1c0c87b3f50e9cd80e
             const data = await response.json();
             setCourses(data);
         }
@@ -23,7 +31,6 @@ const Categories = () => {
 
     return (
         <section className="">
-
             <div className='text-2xl flex-none md:flex py-10 md:py-16'>
                 <div className=' w-full md:w-1/4 min-h-fit mx-2 md:mx-4 border-2 rounded-md static md:fixed'>
                     <div className="py-4 md:py-8 bg-white">
@@ -37,7 +44,7 @@ const Categories = () => {
                         <div className="col-span-1 md:col-span-2"></div>
                         <div className="col-span-1 md:col-span-5 py-2">
                             <h1 className="text-2xl md:text-3xl font-semibold mb-2">Bachelor's degrees from all around the world</h1>
-                            <p className="text-gray-500">Page 1 | 108853 Bachelors</p>
+                            <p className="text-gray-500">Page 1 | 108 Bachelors</p>
                         </div>
                     </div>
                     <div className="bg-[#edf3f6] ml-96">

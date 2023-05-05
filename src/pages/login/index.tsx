@@ -8,12 +8,12 @@ import {FcGoogle} from 'react-icons/fc';
 
 const Login = () => {
     return (
-        <div className='min-h-screen login-wrapper relative grid grid-cols-2'>
+        <div className='min-h-screen login-wrapper relative grid grid-cols-2 items-center'>
             <div>
                 <Image src={bg} alt="login-bg"/>
             </div>
-            <div className='w-full h-screen grid items-center justify-center'>
-                <div>
+            <div className='flex justify-center items-center'>
+                <div className='w-3/4'>
                     <div className="nav-logo flex gap-2 items-center mb-5">
                         <Image src={logo} alt="" className="w-10" />
                         <h2 className="text-2xl font-medium"><span className="text-primary">Study</span><span className="text-secondary">maze</span></h2>
