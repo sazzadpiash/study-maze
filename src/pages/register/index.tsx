@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import registerBanner from '../../../public/assets/registerBanner/register_banner.svg';
-import facebook from '../../../public/assets/logo/facebook.png';
 import google from '../../../public/assets/logo/google.png';
-import { FaUser, FaLock, FaHandSparkles } from "react-icons/fa";
-import { HiMail, HiPhone } from "react-icons/hi";
+import { FaUser, FaLock } from "react-icons/fa";
+import { HiMail } from "react-icons/hi";
 import Styles from '../../styles/Button.module.css'
 import { useState } from 'react'
 import Meta from '@/components/head/meta';
@@ -14,15 +13,13 @@ type FormData = {
     email: string;
     password: string;
     confirmPassword: string;
-
 };
 
 
-const Register = () => {
 
+const Register = () => {
     const [check, setUnCheck] = useState(false)
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm<FormData>();
-
     const onSubmit = (data: any) => {
         console.log(data);
         reset()
@@ -40,13 +37,8 @@ const Register = () => {
                 </div>
                 <div className='p-5'>
                     <h1 className='text-center text-gray-700 font-bold text-xl'>Sign up with</h1>
-                    <div className='flex lg:w-1/2 mx-auto justify-evenly lg:justify-between my-5'>
-                        <button className='flex items-center font-semibold border focus:border-secondary px-2 py-1 rounded-sm text-gray-700 shadow-2xl hover:bg-blue-200 hover:shadow-xl hover:translate-x-100 hover:delay-200 hover:duration-300'>
-                            <Image width={35} alt='' src={facebook}>
-                            </Image>
-                            facebook
-                        </button>
-                        <button className='flex items-center font-semibold border focus:border-secondary px-2 py-1 rounded-sm text-gray-700 shadow-2xl hover:bg-blue-200 hover:shadow-xl hover:translate-x-100 hover:delay-200 hover:duration-300'>
+                    <div className='flex lg:w-1/2 mx-auto justify-center my-5'>
+                        <button className='flex items-center font-semibold border focus:border-secondary px-10 focus: py-1 rounded-sm text-gray-700 shadow-sm hover:bg-blue-200 hover:shadow-xl hover:translate-x-100 hover:delay-200 hover:duration-300'>
                             <Image width={35} alt='' src={google}>
                             </Image>
                             Google

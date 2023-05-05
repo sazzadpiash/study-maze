@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import AuthProvider from '../Context/AuthProvider';
+import { Toaster } from "react-hot-toast";
 
 const Layout = ({ children }: any) => {
 
@@ -9,6 +10,7 @@ const Layout = ({ children }: any) => {
             <AuthProvider>
                 <Header></Header>
                 {children}
+                <Toaster />
                 <Footer></Footer>
             </AuthProvider>
         </div>

@@ -21,29 +21,32 @@ const CategoriesSidebar = () => {
 
     console.log(universities);
     return (
-        <section className="mx-2 md:mx-4">
-            <div className="h-1 rounded-sm bg-[#f95c39] hidden md:block"></div>
-            <div>
-                <div className='ml-2 font-semibold text-center md:text-start mt-4'>
-                    <h3 className='underline md:no-underline'>Categories</h3>
-                </div>
-                <div className='mt-2'>
-                    <ul className='text-sm md:text-lg font-semibold ml-2 md:ml-4 grid grid-cols-2 md:grid-cols-1 gap-3 md:gap-1 md:text-start'>
+        <>
+            <section className="mx-2 md:mx-4">
+                <div className="h-1 rounded-sm bg-[#f95c39] hidden md:block"></div>
+                <div>
+                    <div className='ml-2 font-semibold text-center md:text-start mt-4'>
+                        <h3 className='underline md:no-underline'>Categories</h3>
+                    </div>
+                    <div className='mt-2'>
+                        <ul className='text-sm md:text-lg font-semibold ml-2 md:ml-4 grid grid-cols-2 md:grid-cols-1 gap-3 md:gap-1 md:text-start'>
 
-                        {universities?.length &&
-                            universities?.map((course: any) => {
-                                return <CategoryItem
-                                    key={course?._id}
-                                    category={course.name}
-                                    icon={course.icon}
-                                >
-                                </CategoryItem>
-                            })}
+                            {universities?.length &&
+                                universities?.map((course: any) => {
+                                    return <CategoryItem
+                                        key={course?._id}
+                                        category={course.name}
+                                        icon={course.icon}
+                                    >
+                                    </CategoryItem>
+                                })}
 
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </>
+
     );
 };
 

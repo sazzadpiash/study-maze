@@ -6,7 +6,7 @@ import { Button } from '@/components/buttonGroup/button';
 const ApplySection = () => {
     return (
         <div>
-            <h1 className='text-5xl font-bold text-center py-20 text-gray-800'>Get Started With ApplyBoard</h1>
+            <h1 className='text-5xl font-bold text-center py-20 text-gray-800'>Get Started With <span className='text-primary'>Study</span><span className='text-secondary'>Maze</span></h1>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-5 max-w-6xl mx-auto'>
                 <div className='border-2 border-gray-400 rounded-lg p-10'>
                     <div className='w-3/4 mx-auto'>
