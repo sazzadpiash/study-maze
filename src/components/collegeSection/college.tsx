@@ -1,17 +1,17 @@
 import Image from 'next/image';
 import styles from '../../styles/Button.module.css'
-import coventry from '../../../public/assets/collegeLogo/Coventry-University.webp'
-import middlesex from '../../../public/assets/collegeLogo/Middlesex-University-London (1).webp'
-import middlesex2 from '../../../public/assets/collegeLogo/London-Metropolitan-University.webp';
-import coventryCollege from '../../../public/assets/collegeLogo/image/coventry.webp'
-import middle from '../../../public/assets/collegeLogo/image/Middlesex.webp'
-import london from '../../../public/assets/collegeLogo/image/london.webp'
+import coventry from '../../../public/Assets/collegeLogo/Coventry-University.webp'
+import middlesex from '../../../public/Assets/collegeLogo/Middlesex-University-London (1).webp'
+import middlesex2 from '../../../public/Assets/collegeLogo/London-Metropolitan-University.webp';
+import coventryCollege from '../../../public/Assets/collegeLogo/image/coventry.webp'
+import middle from '../../../public/Assets/collegeLogo/image/Middlesex.webp'
+import london from '../../../public/Assets/collegeLogo/image/london.webp'
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { HiArrowRight } from 'react-icons/hi';
 const College = () => {
     return (
         <div className='max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5 pb-10'>
-            <div className='shadow-sm outline-1 shadow-black rounded-md pb-5'>
+            <div data-aos='zoom-in' data-aos-duration="3000" className='shadow-sm outline-1 shadow-black rounded-md pb-5'>
                 <div className='flex items-center justify-evenly p-5'>
                     <Image alt='' src={coventry} width={70} height={70} />
                     <div className='space-y-3'>
@@ -34,7 +34,7 @@ const College = () => {
                 </div>
             </div>
             {/* card-2 */}
-            <div className='shadow-sm outline-1 shadow-black rounded-md pb-10'>
+            <div data-aos='zoom-in' data-aos-duration="3000" className='shadow-sm outline-1 shadow-black rounded-md pb-10'>
                 <div className='flex items-center justify-evenly p-5'>
                     <Image alt='' src={middlesex} width={70} height={70} />
                     <div className='space-y-3'>
@@ -57,7 +57,7 @@ const College = () => {
                 </div>
             </div>
             {/* card -3 */}
-            <div className='shadow-sm outline-1 shadow-black rounded-md pb-5'>
+            <div data-aos='zoom-in' data-aos-duration="3000" className='shadow-sm outline-1 shadow-black rounded-md pb-5'>
                 <div className='flex items-center justify-evenly p-5'>
                     <Image alt='' src={middlesex2} width={70} height={70} />
                     <div className='space-y-3'>

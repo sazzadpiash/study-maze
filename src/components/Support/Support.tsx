@@ -16,7 +16,7 @@ const Support = () => {
     //     {
     //         image:img2,
     //         title:"Recruitment Partners",
-    //         description: "ApplyBoard is more than a platform—we are your trusted partner—here to help you do what you do best: help as many students as possible fulfill their international education dreams."
+    //         description: "StudyMaze is more than a platform—we are your trusted partner—here to help you do what you do best: help as many students as possible fulfill their international education dreams."
     //     },
     //     {
     //         image:img3,
@@ -100,7 +100,7 @@ AOS.init()
                         <div data-aos="fade-right"
      data-aos-duration="1000">
          <h3 className=' text-xl font-semibold mb-4'>Recruitment Partners</h3>
-                            <p>ApplyBoard is more than a platform—we are your trusted partner—here to help you do what you do best: help as many students as possible fulfill their international education dreams.</p>
+                            <p>StudyMaze is more than a platform—we are your trusted partner—here to help you do what you do best: help as many students as possible fulfill their international education dreams.</p>
                             <button className=' mt-6 text-lg font-semibold px-5 py-2 rounded-lg text-white bg-primary'>Learn More</button>
 </div>
                            

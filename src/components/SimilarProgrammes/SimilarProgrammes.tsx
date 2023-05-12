@@ -1,3 +1,4 @@
+import { Button } from "../buttonGroup/button";
 import ProgrammeCard from "./ProgrammeCard";
 
 const SimilarProgrammes = () => {
@@ -8,7 +9,7 @@ const SimilarProgrammes = () => {
                 <ProgrammeCard></ProgrammeCard>
             </div>
             <div className="flex justify-center">
-                <button className="py-2 px-4 font-semibold rounded bg-[#05293C] border-2 border-[#05293C] text-white hover:bg-[#05293cda] transition">See other suggestions</button>
+                <Button>See other suggestions</Button>
             </div>
         </div>
     );

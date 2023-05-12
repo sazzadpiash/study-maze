@@ -1,7 +1,7 @@
 import { BsArrowRight } from "react-icons/bs";
 const DestinationCard = ({ data }: any) => {
     return (
-        <div className=" h-56 mx-auto">
+        <div data-aos='flip-right' data-aos-duration='3000' className=" h-56 mx-auto">
 
             <div>
                 <img className="w-full mt-0 pt-0" src={data?.image} alt="" />

@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "study-maze-f31e6"
-  }
+    "default": "study-maze-bd55d",
+    "out": "study-maze-bd55d"
+  },
+  "targets": {},
+  "etags": {}
 }

@@ -4,7 +4,7 @@ import handShake from '../../../public/Assets/hand-shake.svg'
 import Image from 'next/image';
 const WhyChoose = () => {
     return (
-        <div className=' my-24'>
+        <div data-aos="fade-up" data-aos-duration="3000" className=' my-24 '>
             <h2 className="text-5xl font-bold text-center mb-16">Why Choose <span className="text-primary">Study</span><span className="text-secondary">maze</span> ?</h2>
             <div className=' grid grid-cols-3 px-28 font-medium'>
                 <div>

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import img1 from '../../../public/assets/blogImage/study.png'
-import img2 from '../../../public/assets/blogImage/tution.png'
-import img3 from '../../../public/assets/blogImage/study-australia.png'
+import img1 from '../../../public/Assets/blogImage/study.png'
+import img2 from '../../../public/Assets/blogImage/tution.png'
+import img3 from '../../../public/Assets/blogImage/study-australia.png'
 import { HiArrowRight } from "react-icons/hi";
 import styles from '../../styles/Button.module.css'
 const ServiceBlog = () => {
@@ -10,7 +10,7 @@ const ServiceBlog = () => {
             <h1 className="text-5xl font-bold text-center my-10 text-gray-800">We Support Everyone in the Industry <br /> by Being Thought Leaders</h1>
             {/* service cards */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
-                <div className="border-2">
+                <div data-aos='fade-right' data-aos-duration='2000' className="border-2">
                     <Image
                         src={img1}
                         alt="Picture of the author"
@@ -30,7 +30,7 @@ const ServiceBlog = () => {
                     </div>
                 </div>
                 {/* card -2 */}
-                <div className="border-2">
+                <div data-aos='fade-up' data-aos-duration='2000' className="border-2">
                     <Image
                         src={img2}
                         alt="Picture of the author"
@@ -50,7 +50,7 @@ const ServiceBlog = () => {
                     </div>
                 </div>
                 {/* card-3 */}
-                <div className="border-2">
+                <div data-aos='fade-left' data-aos-duration='2000' className="border-2">
                     <Image
                         src={img3}
                         alt="Picture of the author"

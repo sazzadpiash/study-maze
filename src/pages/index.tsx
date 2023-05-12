@@ -17,6 +17,7 @@ import BrowseByCategory from '@/components/BrowsebyCategory/BrowseByCategory'
 import Meta from '@/components/head/meta'
 
 export default function Home() {
+ 
 
   return (
     <>

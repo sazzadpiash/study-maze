@@ -17,7 +17,7 @@ const Categories = () => {
         }
         fetchData();
     }, []);
-
+    
     return (
         <section className="">
             <div className="text-2xl flex-none md:flex py-10 md:py-16">

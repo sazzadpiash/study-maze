@@ -30,7 +30,8 @@ const MoreHelpSection = () => {
             <div className="py-4 md:py-6" >
                 <h2 className="text-2xl md:text-5xl text-center font-semibold">How can Studyportals help you even more?</h2>
             </div>
-            <div className="py-6 md:py-10 grid grid-cols-1 md:grid-cols-3 gap-3 mx-2 md:mx-4">
+           <div className="flex justify-center">
+           <div className="py-6 md:py-10 grid grid-cols-1 md:grid-cols-3 gap-3 mx-2 md:mx-4">
                 {
                     infoData.map(data => {
                         return <MoreHelpCard
@@ -40,6 +41,7 @@ const MoreHelpSection = () => {
                     })
                 }
             </div>
+           </div>
         </section>
     );
 };
